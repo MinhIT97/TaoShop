@@ -1,0 +1,57 @@
+﻿@model TaoShop.Models.DB.Comment
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommentTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentContent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommentContent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Laptop)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Laptop.NameLap)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
